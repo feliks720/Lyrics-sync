@@ -1,3 +1,8 @@
+
+
+Suggested updated `README.md` with two small, repository-supported improvements: correct the command-line entry point to `pysync/__main__.py`, and note that the first run downloads the Whisper `medium` model.
+
+```markdown
 # Sync Lyrics and Produce an LRC file using spleeter, whisper, and text similarity.
 
 ## Installation
@@ -16,4 +21,13 @@ Now you're good to go, just execute it from within Anaconda Prompt. Every time y
 
 Pysync can be used using the command line. Setup the environment using conda and make sure that `whisper` and `spleeter` are installed. Then you can use this via the command line, providing an mp3 of the song and text file with lyrics you want to sync. The program will produce a .lrc file with timestamps which can be used by various lyric display programs.
 
-`python pysync [-h] [--output_file OUTPUT_FILE] music lyrics`
+Run it from the repository root:
+
+`python pysync/__main__.py [-h] [--output_file OUTPUT_FILE] music lyrics`
+
+Example:
+
+`python pysync/__main__.py song.mp3 lyrics.txt`
+
+The first run will download the Whisper `medium` model.
+```
